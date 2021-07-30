@@ -1,6 +1,5 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
-import "./App.css"
 import Home from "./pages/home/Home";
 import {
   BrowserRouter as Router,
@@ -8,6 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
+import User from "./pages/user/User";
+import "./App.css"
 
 function App() {
   return (
@@ -23,11 +24,14 @@ function App() {
             <Route exact path="/users">
               <UserList />
             </Route>
+            <Route exact path="/user/:userId">
+              <User />
+            </Route>
           </Switch>
         </div>
       </Router>
     </div>
-    
+
   );
 }
 
