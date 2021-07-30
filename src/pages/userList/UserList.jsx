@@ -49,7 +49,7 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/users/" + params.row.id}>
+            <Link to={"/user/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
             <DeleteOutline
@@ -66,10 +66,10 @@ export default function UserList() {
     <div className="userList">
       <DataGrid
         rows={data}
-        disableSelectionOnClick
         columns={columns}
         pageSize={8}
         checkboxSelection
+        disableSelectionOnClick
       />
     </div>
   );

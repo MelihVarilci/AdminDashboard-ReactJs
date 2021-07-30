@@ -9,6 +9,7 @@ import {
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
 import "./App.css"
+import NewUser from "./pages/newUser/NewUser";
 
 function App() {
   return (
@@ -24,8 +25,11 @@ function App() {
             <Route exact path="/users">
               <UserList />
             </Route>
-            <Route exact path="/user/:userId">
+            <Route path="/user/:userId">
               <User />
+            </Route>
+            <Route exact path="/newUser">
+              <NewUser />
             </Route>
           </Switch>
         </div>
