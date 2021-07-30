@@ -12,6 +12,7 @@ import "./App.css"
 import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
+import NewProduct from "./pages/newProduct/NewProduct";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/product/:productId">
               <Product />
+            </Route>
+            <Route exact path="/newProduct">
+              <NewProduct />
             </Route>
           </Switch>
         </div>
