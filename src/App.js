@@ -26,7 +26,6 @@ function App() {
   }
 
   const [user, setUser] = useState({ name: "", email: "" })
-  const [error, setError] = useState("")
 
   const Login = details => {
     console.log(details)
@@ -38,7 +37,6 @@ function App() {
       })
       toast.success("Logged in");
     } else {
-      setError("Details do not match")
       toast.error("Details do not match");
     }
   }
@@ -60,38 +58,25 @@ function App() {
   return (
     <div className="App">
       <ToastContainer position="bottom-right" />
-      {(user.email != "") ?
+      {(user.email !== "") ?
         <Router>
           <Topbar Logout={Logout} />
           <div className="container">
             <Sidebar />
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/users">
-                <UserList />
-              </Route>
-              <Route exact path="/user/:userId">
-                <User />
-              </Route>
-              <Route exact path="/newUser">
-                <NewUser />
-              </Route>
-              <Route exact path="/products">
-                <ProductList />
-              </Route>
-              <Route exact path="/product/:productId">
-                <Product />
-              </Route>
-              <Route exact path="/newProduct">
-                <NewProduct />
-              </Route>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/users" component={UserList} />
+              <Route exact path="/user/:userId" component={User} />
+              <Route exact path="/newUser" component={NewUser} />
+              <Route exact path="/products" component={ProductList} />
+              <Route exact path="/product/:productId" component={Product} />
+              <Route exact path="/newProduct" component={NewProduct} />
             </Switch>
           </div>
         </Router>
         :
-        <AppContainer>
+        <AppContainer >
           <AccountBox Login={Login} />
         </AppContainer>
       }
