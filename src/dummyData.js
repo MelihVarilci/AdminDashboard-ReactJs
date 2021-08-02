@@ -1,3 +1,8 @@
+export const adminData = {
+  email: "admin@admin.com",
+  password: "admin123",
+};
+
 export const userData = [
   {
     name: "Jan",
