@@ -1,3 +1,7 @@
+## Admin Panel React Template
+
+<img src="./src/assets/images/AdminPanel.gif" width="100%" height="auto">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
