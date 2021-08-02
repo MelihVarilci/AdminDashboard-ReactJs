@@ -82,7 +82,7 @@ export default function Sidebar() {
             </li>
             <li
               className={getClassname("transactions")}
-              onClick={() => handleRoute("home")}
+              onClick={() => handleRoute("transactions")}
             >
               <AttachMoney className="sidebarIcon" />
               Transactions

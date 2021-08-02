@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ProductList from "./pages/productList/ProductList";
+import Transaction from './pages/transaction/Transaction';
 import NewProduct from "./pages/newProduct/NewProduct";
 import Sidebar from "./components/sidebar/Sidebar";
 import UserList from "./pages/userList/UserList";
@@ -14,8 +15,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { AccountBox } from "./components/accountBox";
 import { ToastContainer, toast } from 'react-toastify';
+import { AccountBox } from "./components/accountBox";
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css"
 
@@ -72,6 +73,7 @@ function App() {
               <Route exact path="/products" component={ProductList} />
               <Route exact path="/product/:productId" component={Product} />
               <Route exact path="/newProduct" component={NewProduct} />
+              <Route exact path="/transactions" component={Transaction} />
             </Switch>
           </div>
         </Router>

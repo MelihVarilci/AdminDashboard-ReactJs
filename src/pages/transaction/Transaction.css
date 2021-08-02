@@ -1,0 +1,8 @@
+.transaction {
+  flex: 4;
+}
+
+.transactionWidgets {
+  display: flex;
+  margin: 20px;
+}
